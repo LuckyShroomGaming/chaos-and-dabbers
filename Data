@@ -1,0 +1,22 @@
+[
+  {
+    "number": 42,
+    "question": "Meaning of life reference in Hitchhiker's Guide?",
+    "answer": "42"
+  },
+  {
+    "number": 85,
+    "question": "Atomic number of astatine?",
+    "answer": "85"
+  },
+  {
+    "number": 7,
+    "question": "How many continents are there?",
+    "answer": "7"
+  },
+  {
+    "number": 12,
+    "question": "Number of months in a year?",
+    "answer": "12"
+  }
+]
