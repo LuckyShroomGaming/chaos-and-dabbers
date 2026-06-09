@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaos & Dabbers CIC</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@600&display=swap');
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      background-color: #F7F5F9; /* Moon Milk */
+      color: #3B2E4A; /* Midnight Ink */
+      background-image: radial-gradient(#DCC8FF 0.5px, #F7F5F9 0.5px); /* Lavender Static texture */
+      background-size: 20px 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3B2E4A, #251B30); /* Midnight Ink Deep */
+      color: #F7F5F9;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 4px solid #FAD6E6; /* Fairy Blush Trim */
+      box-shadow: 0 0 15px rgba(220, 200, 255, 0.4); /* Soft Glow */
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      text-shadow: 0 0 8px #FAD6E6; /* Barbiecore Glitter Glow */
+      margin: 0 0 10px 0;
+    }
+
+    .brand-subtitle {
+      font-family: 'Poppins', sans-serif;
+      color: #BFE7FF; /* Crystal Sky */
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav a {
+      font-family: 'Poppins', sans-serif;
+      margin: 0 10px;
+      color: #FAD6E6;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      display: inline-block;
+    }
+
+    nav a.active {
+      border-color: #FAD6E6;
+      background: rgba(250, 214, 230, 0.1);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: #FFFFFF;
+      padding: 25px;
+      margin-bottom: 25px;
+      border-radius: 24px; /* Whimsical Storybook Curves */
+      border: 2px solid #DCC8FF; /* Lavender Static Frame */
+      box-shadow: 0 8px 24px rgba(59, 46, 74, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Gold Chav Chain / Glitter Accent Border */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 6px;
+      background: linear-gradient(90deg, #FAD6E6, #DCC8FF, #BFE7FF, #CDE8B6);
+    }
+
+    .card h2, .card h3 {
+      color: #3B2E4A;
+      margin-top: 0;
+      border-bottom: 2px dashed #CDE8B6; /* Goblin Mint Divider */
+      padding-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 5px;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    li::before {
+      content: "✨ ";
+    }
+
+    .mascot-list span {
+      font-weight: bold;
+      color: #3B2E4A;
+      background: #FAD6E6;
+      padding: 2px 6px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .btn-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #FAD6E6 0%, #DCC8FF 100%); /* Barbie x Fairy Gradient */
+      color: #3B2E4A;
+      border: 2px solid #3B2E4A;
+      cursor: pointer;
+      border-radius: 50px;
+      box-shadow: 0 5px 0 #3B2E4A; /* Pop-art heavy bottom shadow */
+      transition: all 0.1s ease;
+      width: 100%;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #DCC8FF 0%, #BFE7FF 100%);
+    }
+
+    button:active {
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 #3B2E4A;
+    }
+
+    #game-box {
+      margin-top: 20px;
+      display: none;
+    }
+
+    #question-display {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.15rem;
+      margin-top: 15px;
+      padding: 20px;
+      background: #EADBC8; /* Mushroom Soil */
+      border-radius: 16px;
+      border: 2px solid #3B2E4A;
+      text-align: center;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chaos & Dabbers CIC</h1>
+  <div class="brand-subtitle">Where Chaos Finds Community</div>
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#" onclick="alert('Mugs, Hoodies, & Ecosystem coming soon!')">Merch</a>
+    <a href="#" onclick="alert('Tuesday: Trauma & Trivia\nThursday: ADHD Goblin Quiz')">Sessions</a>
+  </nav>
+</header>
+
+<div class="container">
+  
+  <!-- About Card -->
+  <div class="card">
+    <h2>Gamified Wellbeing</h2>
+    <p>A safe, high-energy space for neurodivergent adults, carers, and socially exhausted humans who survive entirely on tea, sarcasm, and pure spite.</p>
+  </div>
+
+  <!-- Interactive Gameplay Card -->
+  <div class="card">
+    <h2>Interactive Dabber Module</h2>
+    <p>Need a dopamine hit right now? Tap below to draw a chaotic sample question from our upcoming mobile collection sets.</p>
+    
+    <div class="btn-container">
+      <button onclick="triggerChaos()">DAB FOR CHAOS</button>
+    </div>
+
+    <div id="game-box">
+      <div id="question-display">Loading cosmic data...</div>
+    </div>
+  </div>
+
+  <!-- Mascots Card -->
+  <div class="card">
+    <h3>Active Goblins On Duty</h3>
+    <ul class="mascot-list">
+      <li><span>Dabby</span> Tracksuit-wearing mushroom gremlin.</li>
+      <li><span>Luna</span> Pink glittering moon spirit with heavy gold chains.</li>
+      <li><span>Spike</span> Sarcastic cactus screaming internally in the corner.</li>
+      <li><span>Doris & Mavis</span> Chaotic ducks. Two ducks, absolutely zero funds.</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Barely functional but present. © 2026 Chaos & Dabbers.
+</footer>
+
+<script>
+  const sampleQuestions = [
+    "ADHD GOBLIN QUIZ — #42: I marked it wrong but confidently. What is the cosmic answer to life, the universe, and everything?",
+    "TRAUMA & TRIVIA — #85: What is the highly unstable atomic number of astatine? (And why does it feel like your attention span?)",
+    "CRYSTALS & MUSHROOMS — #7: How many continents do you hyperfixate on exploring while lying in bed avoiding your laundry?",
+    "WEIRD ANIMAL FACTS — #12: How many months a year do axolotls spend judging your executive dysfunction?"
+  ];
+
+  function triggerChaos() {
+    const gameBox = document.getElementById('game-box');
+    const display = document.getElementById('question-display');
+    
+    gameBox.style.display = 'block';
+    display.innerHTML = "✨ <i>Dabbing the grid...</i> ✨";
+    
+    setTimeout(() => {
+      const randomQ = sampleQuestions[Math.floor(Math.random() * sampleQuestions.length)];
+      display.innerText = randomQ;
+    }, 400);
+  }
+</script>
+
+</body>
+</html>
