@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Bingo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Live Chaos Grid</h1>
+  <div class="brand-subtitle">Mark it wrong but confidently</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="membership.html">Membership</a>
+    <a href="bingo.html" class="active">Play</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Interactive Dabber Module</h2>
+    <p>Tap the glow-ink command block below to query a live token question directly from the database server configuration layer.</p>
+    
+    <button onclick="getBackendQuestion()">DAB FOR CHAOS</button>
+    
+    <div id="question-display" style="display:none;"></div>
+  </div>
+</div>
+
+<script>
+  function getBackendQuestion() {
+    const display = document.getElementById("question-display");
+    display.style.display = "block";
+    display.innerHTML = "<i>🔮 Communicating with the goblin server...</i>";
+    
+    fetch("/api/question")
+      .then(res => res.json())
+      .then(q => {
+        display.innerHTML = `<strong>🔮 NUMBER ${q.number}:</strong><br><br>${q.question}`;
+      })
+      .catch(() => {
+        display.innerHTML = "❌ <strong>Error:</strong> Are you previewing files locally? Run via Render server to execute database API fetches.";
+      });
+  }
+</script>
+
+<footer>Barely functional but present. © 2026 Chaos & Dabbers.</footer>
+</body>
+</html>
