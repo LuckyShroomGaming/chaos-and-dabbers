@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Schedule</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Chaotic Sessions</h1>
+  <div class="brand-subtitle">Keep track of your dopamine checkpoints</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html" class="active">Events</a>
+    <a href="membership.html">Membership</a>
+    <a href="bingo.html">Play</a>
+  </nav>
+</header>
+
+<div class="container" id="events-container">
+  <!-- Dynamic events load here -->
+</div>
+
+<script>
+  fetch("/api/events")
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("events-container");
+      if(data.length === 0) {
+        container.innerHTML = '<div class="card"><p>No events scheduled. The goblins are sleeping.</p></div>';
+        return;
+      }
+      data.forEach(e => {
+        container.innerHTML += `
+          <div class="card">
+            <h2>${e.name}</h2>
+            <p><strong>📅 When:</strong> ${e.day}</p>
+            <p>${e.description}</p>
+          </div>
+        `;
+      });
+    })
+    .catch(() => {
+      document.getElementById("events-container").innerHTML = '<div class="card"><p>Error connecting to backend database.</p></div>';
+    });
+</script>
+
+<footer>Barely functional but present. © 2026 Chaos & Dabbers.</footer>
+</body>
+</html>
