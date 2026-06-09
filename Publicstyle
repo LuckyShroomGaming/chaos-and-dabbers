@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@600&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  background-color: #F7F5F9; /* Moon Milk */
+  color: #3B2E4A; /* Midnight Ink */
+  background-image: radial-gradient(#DCC8FF 0.5px, #F7F5F9 0.5px); /* Lavender Static texture */
+  background-size: 20px 20px;
+}
+
+header {
+  background: linear-gradient(135deg, #3B2E4A, #251B30);
+  color: #F7F5F9;
+  padding: 25px 20px;
+  text-align: center;
+  border-bottom: 4px solid #FAD6E6; /* Fairy Blush */
+  box-shadow: 0 0 15px rgba(220, 200, 255, 0.4);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  text-shadow: 0 0 8px #FAD6E6;
+  margin-bottom: 5px;
+}
+
+.brand-subtitle {
+  font-family: 'Poppins', sans-serif;
+  color: #BFE7FF; /* Crystal Sky */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  font-family: 'Poppins', sans-serif;
+  margin: 0 8px;
+  color: #FAD6E6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+nav a:hover, nav a.active {
+  border-color: #FAD6E6;
+  background: rgba(250, 214, 230, 0.1);
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: #FFFFFF;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 24px;
+  border: 2px solid #DCC8FF;
+  box-shadow: 0 8px 24px rgba(59, 46, 74, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 6px;
+  background: linear-gradient(90deg, #FAD6E6, #DCC8FF, #BFE7FF, #CDE8B6);
+}
+
+.card h2, .card h3 {
+  border-bottom: 2px dashed #CDE8B6; /* Goblin Mint */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 5px;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 12px;
+}
+
+li::before {
+  content: "✨ ";
+}
+
+.mascot-list span, .price-badge {
+  font-weight: bold;
+  color: #3B2E4A;
+  background: #FAD6E6;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #FAD6E6 0%, #DCC8FF 100%);
+  color: #3B2E4A;
+  border: 2px solid #3B2E4A;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0 5px 0 #3B2E4A;
+  transition: all 0.1s ease;
+  width: 100%;
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #3B2E4A;
+}
+
+#question-display {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  margin-top: 20px;
+  padding: 20px;
+  background: #EADBC8; /* Mushroom Soil */
+  border-radius: 16px;
+  border: 2px solid #3B2E4A;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
