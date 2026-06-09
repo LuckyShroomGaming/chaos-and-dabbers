@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Tiers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Support the Chaos</h1>
+  <div class="brand-subtitle">This is our actual revenue layer</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="membership.html" class="active">Membership</a>
+    <a href="bingo.html">Play</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2><span class="price-badge">£5</span> Moon Goblin</h2>
+    <p>Standard entry to weekly community events and basic digital group channels.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="price-badge">£10</span> Chaos Keeper</h2>
+    <p>Includes bonus alternative session access, custom game tools, and priority line booking.</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="price-badge">£20</span> Prism Pixie</h2>
+    <p>VIP status, heavy gold-chain validation, and exclusive discount codes on all standard merch drops.</p>
+  </div>
+</div>
+
+<footer>Barely functional but present. © 2026 Chaos & Dabbers.</footer>
+</body>
+</html>
