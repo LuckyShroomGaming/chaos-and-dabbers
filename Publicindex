@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaos & Dabbers CIC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Chaos & Dabbers CIC</h1>
+  <div class="brand-subtitle">Where Chaos Finds Community</div>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="events.html">Events</a>
+    <a href="membership.html">Membership</a>
+    <a href="bingo.html">Play</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>Gamified Wellbeing</h2>
+    <p>A safe, high-energy space for neurodivergent adults, carers, and socially exhausted humans who survive entirely on tea, sarcasm, and pure spite.</p>
+  </div>
+
+  <div class="card">
+    <h3>Active Goblins On Duty</h3>
+    <ul class="mascot-list">
+      <li><span>Dabby</span> Tracksuit-wearing mushroom gremlin.</li>
+      <li><span>Luna</span> Pink glittering moon spirit with heavy gold chains.</li>
+      <li><span>Spike</span> Sarcastic cactus screaming internally in the corner.</li>
+      <li><span>Doris & Mavis</span> Chaotic ducks. Two ducks, absolutely zero funds.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>Barely functional but present. © 2026 Chaos & Dabbers.</footer>
+</body>
+</html>
